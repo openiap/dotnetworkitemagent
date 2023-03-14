@@ -10,6 +10,7 @@ using Openiap;
 dynamic ProcessWorkitem(Workitem wi, dynamic payload)
 {
     payload.name = "updated";
+    wi.Name = "Hello world from c#";
     if(payload.error != null) throw new Exception("Hi mom!!!");
     return payload;
 }

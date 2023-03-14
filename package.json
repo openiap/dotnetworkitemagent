@@ -4,7 +4,8 @@
   "description": "dotnet agent processing workitems from a queue",
   "main": "dotnetworkitemagent.csproj",
   "openiap": {
-    "daemon": true
+    "daemon": true,
+    "chromium": false
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
