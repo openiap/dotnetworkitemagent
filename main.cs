@@ -6,6 +6,7 @@ using Openiap;
 // Force update
 // dotnet nuget locals all -c
 // dotnet remove package openiap.dotnetapi && dotnet add package openiap.dotnetapi --version 0.0.7
+var defaultwiq = "dotnetagent";
 
 dynamic ProcessWorkitem(Workitem wi, dynamic payload)
 {
@@ -19,6 +20,7 @@ var apiurl = Environment.GetEnvironmentVariable("apiurl");
 if(apiurl == null || apiurl == "" ) apiurl = Environment.GetEnvironmentVariable("grpcapiurl");
 var wiq = Environment.GetEnvironmentVariable("wiq");
 var queue = Environment.GetEnvironmentVariable("queue");
+if(wiq == null || wiq == "") wiq = defaultwiq;
 if(queue == null || queue == "") queue = wiq;
 if(wiq == null || queue == null || apiurl == null) {
     Console.WriteLine("wiq, apiurl and queue environment variables must be set");
@@ -59,6 +61,7 @@ client.OnSignedin = async (user) =>
             }
             return null;
         });
+        Console.WriteLine("Registered queue " + result);
     }
     catch (System.Exception ex)
     {
