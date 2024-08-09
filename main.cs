@@ -26,7 +26,8 @@ if(wiq == null || queue == null || apiurl == null) {
     Console.WriteLine("wiq, apiurl and queue environment variables must be set");
     return;
 }
-openiap client = new openiap(apiurl);
+// openiap client = new openiap(apiurl);
+openiap client = await openiap.QuickConnect(apiurl);
 client.OnSignedin = async (user) =>
 {
     Console.WriteLine("Signed in as " + user.Username);
@@ -69,7 +70,10 @@ client.OnSignedin = async (user) =>
     }
     // return Task.CompletedTask;
 };
-await protowrap.Connect(client);
+// await protowrap.Connect(client);
+// await Task.Delay(2000);
+// await client.DownloadFile("66a17aeb820dffeb38be21c0");
+
 do
 {
     await Task.Delay(500);
