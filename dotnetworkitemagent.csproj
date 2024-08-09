@@ -9,6 +9,6 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
-    <PackageReference Include="openiap.dotnetapi" Version="0.0.7" />
+    <PackageReference Include="openiap.dotnetapi" Version="0.0.9" />
   </ItemGroup>
 </Project>
