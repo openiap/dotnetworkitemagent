@@ -1,21 +1,18 @@
-## DotNET test project
-This is a test project showing how to call most of the functions in the OpenIAP core library.
-Program.cs is a command line interface that can be used to call a few functions
-test.cs is a simple class that calls all the functions in the core library, you can run this from the cli with the `t` command
+## dotnet workitem agent example
+This is a example project, functions as a template for how to get started writing a more controlable workitem agent for the OpenCore platform.
 
-# Build and run
-```
-dotnet run
-```
-To re-install the openiap package, you can use the following commands
-```
+We connect to the server, and also register an event listener waiting for "SignedIn" events. 
+When we get a "SignedIn" event, register a message queue based of the `queue` environment variable, and start listening for messages.
+This should match the name of the workitem queue we want this agent to handle.
 
-rm -rf bin && dotnet nuget locals all --clear && dotnet add package openiap -s ../openiap/dotnet/packages && dotnet run 
+When we get a message, we will pop a workitem of the workitem queue, and if one is found ( in case more agents are listening )
+we start processing it inside `ProcessWorkitem` 
+We then update the state of the workitem to successful or retry, depending on the outcome of `ProcessWorkitem`.
 
-rm -rf bin && dotnet nuget locals all --clear && dotnet add package openiap --version 0.0.21 && dotnet run 
+When running inside an agent make sure the `wiq` environment variable has been set to the name of the workitem queue you want to listen to.
+When running local, make sure to add this to your .env file.
+If you need to use a different queue name from the workitem queue name, you can set the `queue` environment variable to something different.
+
 ```
-To clear local cache, in case of any issues
-```
-dotnet nuget locals all --list
-dotnet nuget locals all --clear
+https://github.com/openiap/dotnetworkitemagent.git
 ```
