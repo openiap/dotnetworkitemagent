@@ -70,7 +70,7 @@ class Program
             
             string wiq = Environment.GetEnvironmentVariable("wiq") ?? defaultWiq;
             string queue = Environment.GetEnvironmentVariable("queue") ?? wiq;
-            client.RegisterQueue(queue, async (queueEvent) => {
+            string queuename = client.RegisterQueue(queue, async (queueEvent) => {
                 try
                 {
                     int counter = 0;
@@ -95,7 +95,7 @@ class Program
                     Console.WriteLine($"Error processing queue: {error}");
                 }
             });
-            Console.WriteLine($"Consuming queue {queue}");
+            Console.WriteLine($"Consuming queue {queuename}");
         }
 
     }
