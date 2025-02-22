@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnetworkitemagent", "dotnetworkitemagent.csproj", "{FFD0F2F5-3E66-48C5-9D74-B8C67075E30F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnettest", "dotnettest.csproj", "{22A18444-B1C8-46E5-90DB-5DCBD7EC917F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{FFD0F2F5-3E66-48C5-9D74-B8C67075E30F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FFD0F2F5-3E66-48C5-9D74-B8C67075E30F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FFD0F2F5-3E66-48C5-9D74-B8C67075E30F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FFD0F2F5-3E66-48C5-9D74-B8C67075E30F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22A18444-B1C8-46E5-90DB-5DCBD7EC917F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22A18444-B1C8-46E5-90DB-5DCBD7EC917F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22A18444-B1C8-46E5-90DB-5DCBD7EC917F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22A18444-B1C8-46E5-90DB-5DCBD7EC917F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0A371B72-AD63-4406-AB73-C84C5C32DB0B}
+		SolutionGuid = {7E58DA5C-CD9B-47B3-8FA5-34C9FED386F2}
 	EndGlobalSection
 EndGlobal
