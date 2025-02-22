@@ -106,7 +106,8 @@ class Program
         // Initialize the client
         Console.WriteLine($"Creating client, Thread ID: {Thread.CurrentThread.ManagedThreadId}");
         Client client = new Client();
-        client.enabletracing("openiap=debug", "");
+        client.enabletracing("openiap=info", "");
+        // client.enabletracing("openiap=debug", "");
 
         await client.connect();
         client.on_client_event((e) =>
