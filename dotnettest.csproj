@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="openiap" Version="0.0.24" />
+    <PackageReference Include="openiap" Version="0.0.26" />
   </ItemGroup>
 
 
