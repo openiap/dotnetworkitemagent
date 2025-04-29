@@ -1,6 +1,6 @@
 {
     "name": "dotnettest",
-    "version": "0.0.9",
+    "version": "0.0.1",
     "description": "Example agent, showing how to call most commmands",
     "main": "dotnettest.csproj",
     "openiap": {

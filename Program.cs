@@ -70,7 +70,7 @@ class Program
             
             string wiq = Environment.GetEnvironmentVariable("wiq") ?? defaultWiq;
             string queue = Environment.GetEnvironmentVariable("queue") ?? wiq;
-            string queuename = client.RegisterQueue(queue, async (queueEvent) => {
+            string queuename = client.RegisterQueueAction(queue, async (queueEvent) => {
                 try
                 {
                     int counter = 0;
